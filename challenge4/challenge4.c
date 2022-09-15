@@ -3,14 +3,26 @@
 
 int main()
 {
-    int numbers[8] = {10, 111, 20, 245, 80, 40, 10, 90};
-    int i, somme;
+    int i, somme, n, max_number;
+    max_number = 0;
     somme = 0;
-    for(i = 0; i <= 8; i++){
-        if(numbers[i] < 100 && numbers[i] > 9){
-            somme += numbers[i];
+
+    do{
+        printf("Please enter a number \n");
+        scanf("%d", &n);
+
+
+        if(n < 100){
+            somme += n;
         }
-    }
+
+        if(n > max_number ){
+            max_number = n;
+        }
+
+    }while(n > 0);
     printf("The sum of your numbers positive ==> %d", somme);
+    printf("The max number is %d", max_number);
+
     return 0;
 }
